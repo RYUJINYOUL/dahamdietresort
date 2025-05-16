@@ -74,7 +74,7 @@ const page = async (props) => {
           height={130}
           src={"/Image/mosap8kp6l.jpeg"}
         />  
-        <div className='text-[13px]'>흙광고기획입니다.</div>
+        <div className='text-[13px]'>다함단식원입니다.</div>
         </div>
        </section>
        <div className='h-[150px]'/>

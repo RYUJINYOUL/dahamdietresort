@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const useUIState = create((set) => ({
-  homeCategory: "홈",
+  homeCategory: "다함단식하우스",
   headerImageSrc:
     "/Image/high.jpg",
   setHomeCategory: (value) => set({ homeCategory: value }),

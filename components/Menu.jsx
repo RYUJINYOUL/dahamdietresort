@@ -19,12 +19,8 @@ export default function Menu(props) {
   let total = props
   const homeCategoryList = [
     {
-      label: "다한홈",
-      src: "/",
-    },
-    {
       label: "다함단식하우스",
-      src: "/dastory",
+      src: "/",
     },
     {
       label: "다함시설",
@@ -41,7 +37,6 @@ export default function Menu(props) {
   ];
 
  
-
   const onClickCategory = (item) => {
     if (homeCategory === item.label) {
       setHeaderImageSrc("");
@@ -58,9 +53,6 @@ export default function Menu(props) {
 }, []);
 
 
-
-
-
 const slideRight = () => {
   var slider = document.getElementById('nav');
     console.log(headerImageSrc)
@@ -68,7 +60,7 @@ const slideRight = () => {
   // if (headerImageSrc === "/dastory") {
   //   slider.scroll(100, 200)
   // }
-  if (headerImageSrc === "/ta") {
+  if (headerImageSrc === "/si") {
     slider.scroll(200, 400)
   }
   if (headerImageSrc === "/qu") {

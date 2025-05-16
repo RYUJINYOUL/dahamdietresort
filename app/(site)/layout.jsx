@@ -1,13 +1,13 @@
 import React from 'react'
-import Header from '@/components/Header'
+import Header2 from '@/components/Header2'
 import Footer from '@/components/Footer'
 
 const layout = ({ children }) => {
   return (
     <div className="w-screen h-full">
-    <Header>
+    <Header2>
       {children}
-    </Header>
+    </Header2>
       {/* <Footer /> */}
     </div>
   )

@@ -18,6 +18,10 @@ export default function Menu2(props) {
   const { homeCategory, setHomeCategory, setHeaderImageSrc, headerImageSrc} = useUIState2();
   let total = props
   const homeCategoryList = [
+     {
+      label: "다함단식하우스",
+      src: "/",
+    },
     {
       label: "다함이야기",
       src: "/dastory",
@@ -69,15 +73,15 @@ const slideRight = () => {
   if (headerImageSrc === "/dastory/reser") {
     slider.scroll(100, 200)
   }
-  // if (headerImageSrc === "/dastory/pro") {
-  //   slider.scroll(200, 400)
-  // }
-  // if (headerImageSrc === "/dastory/jun") {
-  //   slider.scroll(300, 500)
-  // }
-  // if (headerImageSrc === "/dastory/gyu") {
-  //   slider.scroll(500, 600)
-  // }
+  if (headerImageSrc === "/dastory/pro") {
+    slider.scroll(200, 400)
+  }
+  if (headerImageSrc === "/dastory/jun") {
+    slider.scroll(300, 500)
+  }
+  if (headerImageSrc === "/dastory/gyu") {
+    slider.scroll(500, 600)
+  }
 };
   
   return (
@@ -89,7 +93,7 @@ const slideRight = () => {
           key={item.label}
           id={i}
           className={cn(
-            "h-[38px] md:text-[14px] text-[13px] text-white min-w-fit px-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-200",
+            "h-[38px] md:px-10 md:text-[14px] text-[13px] text-white min-w-fit px-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-200",
             total.total&&"md:text-black text-[#aaa]",
             item.label === homeCategory &&
               "font-semibold text-black"

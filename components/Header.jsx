@@ -66,36 +66,41 @@ const Header = ({children}) => {
 
   return (
     <header ref={headRef} className="overflow-y-auto w-full h-full">
-         <section className="relative top-0 w-full">
+      <section className="relative top-0 w-full">
         <div className='sticky top-100 w-full'><Gallery images={slides} /></div>
       </section>
    
-        <section className={cn('absolute w-full top-0 left-0 lg:h-[100px] sm:h-[80px] z-10 flex flex-row items-center lg:justify-between sm:justify-between', isScrolled&&"bg-white")}>
-        <PagePadding>
-        <div className='flex flex-col'>
-        <div className='md:absolute sm:absolute lg:relative lg:w-[1100px] w-full top-0 left-0 lg:h-[100px] sm:h-[80px] z-10 flex flex-row items-center lg:justify-between sm:justify-between'>
-          
-            <div className='w-[300px]'>
-            <Logo total={isScrolled}/>
-            </div>
-            
-            <section className='flex items-center'>
-              <article className='hidden lg:block'>
-              <Menu total={isScrolled} />
-              </article>
-
+      <section className={cn('absolute w-full top-0 left-0 flex lg:h-[55px] sm:h-[40px] z-10 items-start lg:justify-center sm:justify-between', 
+        isScrolled&&"bg-white", homeCategory === "다함단식하우스"&&"lg:h-[90px] sm:h-[80px]")}>
+      <div className='flex flex-col'>
+      <div className='md:absolute sm:absolute lg:relative lg:w-[1100px] w-full items-center lg:justify-between sm:justify-between'>
+        
+          <section className='flex md:bg-white bg-[#d6b79a] flex-row items-center lg:h-[50px] sm:h-[40px]'>
               <HeaderDrawer>
-              <article className='lg:hidden sm:pr-10'>
-              <GiHamburgerMenu className={cn("text-white", isScrolled&&"text-black")} size={30} />
+                <article className='lg:hidden ml-2 sm:pr-10'>
+              <GiHamburgerMenu className={"md:text-black text-white"} size={30} />
+                </article>
+                </HeaderDrawer>
+
+              <article>
+              <Menu total={true} />
               </article>
-              </HeaderDrawer>
-            </section>
+          </section>
+
       </div>    
-      {/* <hr className="h-0.5 border-t-0 hidden lg:block bg-neutral-700 opacity-100 dark:opacity-50"/> */}
-        <div className='mt-1' />
-            </div>
-            </PagePadding>
-        </section>
+      <hr className="h-0.5 border-t-0 hidden lg:block bg-neutral-100 opacity-100 dark:opacity-50"/>
+      <div className='mt-1' />
+      <div className='flex w-full items-center justify-start'>
+      <div className={cn('hidden h-[0px]', homeCategory === "다함단식하우스"&&"block h-[50px]")}>
+        <article className={cn("md:absolute sm:absolute lg:relative hidden top-0 left-0 lg:w-[1100px] w-full", 
+          homeCategory === "다함단식하우스"&&"block")}>
+              <Menu2 total={true} />
+        </article>
+          <hr className="my-1 border-1 bg-neutral-200 opacity-100 dark:opacity-50"/>
+        </div>
+        </div>
+        </div>
+      </section>
       
       <section>{children}</section>
  

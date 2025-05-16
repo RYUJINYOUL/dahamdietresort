@@ -1,68 +1,61 @@
 import Image from "next/image";
+import PagePadding from '@/components/PagePadding';
 
 const Footer = () => {
 
 
 return (
      
-    <section className="bg-[#e1e4e7]">
-    <div className="md:h-[100px] h-[100px] md:py-8 py-3 px-4 sm:px-6 md:flex flex-row justify-start md:items-center md:justify-between lg:px-8">
-        <div className="mt-0 md:mt-0 ">
-            <p className="text-center text-base text-[#6b6b6b]">
-               다함단식하우스@
-            </p>
-        </div>
-        <div className="md:mt-8 mt-4 md:mb-8 flex justify-center space-x-6 ">
-            <a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0" className="text-white hover:text-gray-200">
+    <section>
+    
+     <section className='md:hidden block'>
+          <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 md:w-[1000px] w-screen"/>
+     </section>       
+     <PagePadding>     
+     <div className='mt-7'/>
+         <div className='md:mb-18 mb-4'>
+         <div className='w-full flex flex-col justify-center items-center gap-3'>
+   
+          <Image
+             alt="logo"
+             className="object-cover rounded-full"
+             width={70}
+             height={70}
+             src={"/Image/logo.jpg"}
+           />  
         
-                <Image
-                          alt="mediaItem"
-                          className="object-cover"
-                          width={32}
-                          height={32}
-                          
-                          src={"/Image/blog.svg"}
-                        />  
-            </a>
-
-            <a href="https://section.cafe.naver.com/ca-fe/home" className="text-white hover:text-gray-200">
-        
-            <Image
-                          alt="mediaItem"
-                          className="object-cover"
-                          width={30}
-                          height={30}
-                          
-                          src={"/Image/cafe.png"}
-                        />  
-            </a>
-
-            <a href="https://www.band.us/ko" className="text-white hover:text-gray-200">
-         
-            <Image
-                          alt="mediaItem"
-                          className="object-cover"
-                          width={29}
-                          height={29}
-                          
-                          src={"/Image/band.svg"}
-                        />  
-            </a>
-
-            <a href="https://www.facebook.com/?locale=ko_KR" className="text-white hover:text-gray-200">
-         
-            <Image
-                          alt="mediaItem"
-                          className="object-cover"
-                          width={30}
-                          height={30}
-                          
-                          src={"/Image/Facebook.png"}
-                        />  
-            </a>
-        </div>
-    </div>
-</section>
+             <ul className="list_info flex flex-col items-center">
+                 <li className='text-[#000000] text-[15px] font-semibold'>
+                   <span className="item_description">다함단식원</span>
+                 </li>
+                 <li className='text-[#959595] text-[13px]'>
+                   <span className="item_title">전화번호 : </span>
+                   <span className="item_description">010-3896-0696</span>
+                 </li>
+                <li className='text-[#959595] text-[13px]'>
+                   <span className="item_title">주소 : </span>
+                   <span className="item_description"> 인천광역시 중구 을왕동 741-10</span>
+                 </li>
+                <li className='text-[#959595] text-[13px]'>
+                   <span className="item_title">사업자정보 : </span>
+                   <span className="item_description">121-20-46015</span>
+                 </li>
+                 <div className='mt-5'/>  
+                 
+                 <a href='https://m.search.naver.com/search.naver?query=%EB%8B%A4%ED%95%A8+%EB%8B%A8%EC%8B%9D%ED%95%98%EC%9A%B0%EC%8A%A4%40' target='_blank'>
+                 <li className='text-[#959595] p-2 text-[13px] border-1 border-[#9d9d9d]'>
+                   <span className="item_title">다함 단식하우스@ </span>
+                 </li>
+                 </a>
+               </ul>
+           </div>
+         </div>
+          </PagePadding> 
+      <div className='mt-7'/>    
+      <section className='md:hidden block'>
+          <hr className="h-2.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-50 md:w-[1000px] w-screen"/>
+      </section>   
+     </section>
  )
 }
 

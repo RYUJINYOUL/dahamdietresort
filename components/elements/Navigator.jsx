@@ -14,13 +14,9 @@ function Navigator() {
     const pathname = usePathname()
     const { homeCategory, setHomeCategory, setHeaderImageSrc } = useUIState();
     const homeCategoryList = [
-        {
-      label: "다한홈",
-      src: "/",
-    },
-    {
+      {
       label: "다함단식하우스",
-      src: "/dastory",
+      src: "/",
     },
     {
       label: "다함시설",

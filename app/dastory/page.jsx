@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from "next/image";
 import Footer from '@/components/Footer'
+import Phone from '@/components/ui/phone';
 
 function page (){
   return (
-    <div className='lg:my-10 p-3.5'>
+    <div>
+       <div className='lg:my-10 p-3.5'>
       <div className='md:mt-0 mt-3' />
       
       <section className='flex flex-col justify-center items-center'>
@@ -104,15 +106,15 @@ function page (){
             방문해&nbsp;주셔서&nbsp;감사합니다&nbsp;.
           </p>
         </div>
-      
+        <div className='mt-10'/>
+                <Phone />
+        <div className='mt-7'/>
       </section>
-  
-
-       <div className='h-[150px]'/>
-       
-       <Footer />
+   
+       <div className='mt-20'/>
        </div>
-       
+       <Footer />
+    </div>   
   )
 }
 
