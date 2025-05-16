@@ -1,21 +1,20 @@
 "use client"
-import React, { useRef } from "react"
-// import Link from "next/link"
+import React from "react"
+
 import { useState, useEffect } from 'react'
 import useUIState from "@/hooks/useUIState";
+import useUIState2 from "@/hooks/useUIState2";
 import { cn } from "@/lib/utils"
 import { useRouter } from 'next/navigation'
-// import {
-//   NavigationMenu,
-//   NavigationMenuItem,
-//   NavigationMenuList,
-//   NavigationMenuTrigger,
-// } from "@/components/ui/navigation-menu"
+import { usePathname } from 'next/navigation'
+
 
 
 export default function Menu(props) {
   const { push } = useRouter();
+  const pathname = usePathname()
   const { homeCategory, setHomeCategory, setHeaderImageSrc, headerImageSrc} = useUIState();
+  const { homeCategory2, setHomeCategory2, setHeaderImageSrc2, headerImageSrc2} = useUIState2();
   let total = props
   const homeCategoryList = [
     {
@@ -28,7 +27,7 @@ export default function Menu(props) {
     },
      {
       label: "공지사항",
-      src: "/qu",
+      src: "/ta",
     },
     {
       label: "오시는길",
@@ -45,25 +44,49 @@ export default function Menu(props) {
       setHeaderImageSrc(item.src);
       setHomeCategory(item.label);
       push(item.src, {scroll: false})
-    }
+    } 
   };
 
   useEffect(() => {
+   
+    if(pathname === "/") {
+      setHomeCategory("다함단식하우스");
+      setHomeCategory2("다함단식하우스");
+    } else if (pathname === "/si") {
+      setHomeCategory("다함시설");
+    } else if (pathname === "/ta") {
+      setHomeCategory("공지사항");
+    } else if (pathname === "/map") {
+      setHomeCategory("오시는길");
+    } 
+    else if (pathname === "/dastory") {
+      setHomeCategory("다함단식하우스");
+      setHomeCategory2("다함이야기");
+    } else if (pathname === "/dastory/reser") {
+      setHomeCategory("다함단식하우스");
+      setHomeCategory2("예약및입소절차비용안내");
+    } else if (pathname === "/dastory/pro") {
+      setHomeCategory("다함단식하우스");
+      setHomeCategory2("프로그램");
+    } else if (pathname === "/dastory/jun") {
+      setHomeCategory("다함단식하우스");
+      setHomeCategory2("준비물안내");
+    } else if (pathname === "/dastory/gyu") {
+      setHomeCategory("다함단식하우스");
+      setHomeCategory2("규칙안내");
+    } 
+    
+  
     slideRight()
-}, []);
+}, [ pathname ]);
 
 
 const slideRight = () => {
   var slider = document.getElementById('nav');
-    console.log(headerImageSrc)
-  // console.log(slider.scrollWidth)
-  // if (headerImageSrc === "/dastory") {
-  //   slider.scroll(100, 200)
-  // }
   if (headerImageSrc === "/si") {
     slider.scroll(200, 400)
   }
-  if (headerImageSrc === "/qu") {
+  if (headerImageSrc === "/ta") {
     slider.scroll(300, 500)
   }
   if (headerImageSrc === "/map") {

@@ -6,7 +6,7 @@ import Phone from '@/components/ui/phone';
 function page (){
   
   return (
-    <div>
+    <div className='relative top-20'>
     <div className='lg:my-10 p-3.5'>
      <div className='md:mt-0 mt-3' />
       

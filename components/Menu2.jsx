@@ -1,21 +1,18 @@
 "use client"
-import React, { useRef } from "react"
+import React from "react"
 // import Link from "next/link"
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import useUIState2 from "@/hooks/useUIState2";
 import { cn } from "@/lib/utils"
 import { useRouter } from 'next/navigation'
-// import {
-//   NavigationMenu,
-//   NavigationMenuItem,
-//   NavigationMenuList,
-//   NavigationMenuTrigger,
-// } from "@/components/ui/navigation-menu"
+import { usePathname } from 'next/navigation'
+
 
 
 export default function Menu2(props) {
   const { push } = useRouter();
-  const { homeCategory, setHomeCategory, setHeaderImageSrc, headerImageSrc} = useUIState2();
+  const pathname = usePathname()
+  const { homeCategory2, setHomeCategory2, setHeaderImageSrc2, headerImageSrc2} = useUIState2();
   let total = props
   const homeCategoryList = [
      {
@@ -47,12 +44,12 @@ export default function Menu2(props) {
  
 
   const onClickCategory = (item) => {
-    if (homeCategory === item.label) {
-      setHeaderImageSrc("");
-      setHomeCategory(item.label);
+    if (homeCategory2 === item.label) {
+      setHeaderImageSrc2("");
+      setHomeCategory2(item.label);
     } else {
-      setHeaderImageSrc(item.src);
-      setHomeCategory(item.label);
+      setHeaderImageSrc2(item.src);
+      setHomeCategory2(item.label);
       push(item.src, {scroll: false})
     }
   };
@@ -60,7 +57,7 @@ export default function Menu2(props) {
   useEffect(() => {
     slideRight()
 
-}, [headerImageSrc]);
+}, []);
 
 
 
@@ -68,24 +65,25 @@ export default function Menu2(props) {
 
 const slideRight = () => {
   var slider = document.getElementById('nav2');
-  // slider.scroll(100, 400)
-  // console.log(slider.offsetWidth)
-  if (headerImageSrc === "/dastory/reser") {
+  if (headerImageSrc2 === "/dastory") {
+    slider.scroll(50, 100)
+  }
+  if (headerImageSrc2 === "/dastory/reser") {
     slider.scroll(100, 200)
   }
-  if (headerImageSrc === "/dastory/pro") {
+  if (headerImageSrc2 === "/dastory/pro") {
     slider.scroll(200, 400)
   }
-  if (headerImageSrc === "/dastory/jun") {
+  if (headerImageSrc2 === "/dastory/jun") {
     slider.scroll(300, 500)
   }
-  if (headerImageSrc === "/dastory/gyu") {
+  if (headerImageSrc2 === "/dastory/gyu") {
     slider.scroll(500, 600)
   }
 };
   
   return (
-    <nav id="nav2" className="md:m-0 ml-5 w-full+10 flex gap-2 overflow-x-auto md:pr-0 pr-4">
+    <nav id="nav2" className="md:m-0 md:px-60 ml-5 w-full+10 flex gap-2 overflow-x-auto md:pr-0 pr-4">
     {homeCategoryList.map((item, i) => {
       return (
         <div
@@ -93,9 +91,9 @@ const slideRight = () => {
           key={item.label}
           id={i}
           className={cn(
-            "h-[38px] md:px-10 md:text-[14px] text-[13px] text-white min-w-fit px-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-200",
+            "h-[38px] md:text-[14px] text-[13px] text-white min-w-fit px-2 pt-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-100",
             total.total&&"md:text-black text-[#aaa]",
-            item.label === homeCategory &&
+            item.label === homeCategory2 &&
               "font-semibold text-black"
           )}
         >

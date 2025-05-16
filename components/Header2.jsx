@@ -98,21 +98,22 @@ const Header2 = ({children}) => {
    </div>    
    <hr className="h-0.5 border-t-0 hidden md:block bg-neutral-100 opacity-100 dark:opacity-50"/>
 
-   <div className='mt-1' />
+   {/* <div className='md:pt-1 mt-1 bg-[#fafafa]' /> */}
 
-   <div className='flex md:w-[1100px] w-full items-center justify-start'>
+   <div className='flex w-full bg-[#fafafa] w-full items-center justify-start'>
    <div className={cn('hidden h-[0px]', homeCategory === "다함단식하우스"&&"block h-[50px]")}>
      <article className={cn("md:relative sm:absolute lg:relative hidden md:top-10 lg:top-0 top-0 left-0 lg:w-[1100px]", 
       homeCategory === "다함단식하우스"&&"block")}>
           <Menu2 total={true} />
      </article>
-      <hr className="my-1 border-1 bg-neutral-200 opacity-100 dark:opacity-50"/>
+     <div className='mt-2.5' />
+      <hr className="my-1 border-1 bg-neutral-100 opacity-100 dark:opacity-50"/>
      </div>
     </div>
    </div>
    </section>
   </PagePadding>
- <section className='relative top-20'>{children}</section>
+ <section>{children}</section>
 
 </header>
   )

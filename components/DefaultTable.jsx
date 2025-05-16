@@ -48,7 +48,7 @@ export default function DefaultTable({props}) {
 
 
   const onClickCard = ({ title, name, description, date }) => {
-    push(`/ta/playlist?title=${title}&name=${name}&des=${description}&date=${createdDate}`);
+    push(`/ta/playlist?title=${title}&name=${name}&des=${description}&date=${date}`);
     // push(`/test/?name=${id}collection=${collection}`);
   };
 
@@ -79,7 +79,7 @@ export default function DefaultTable({props}) {
         <tbody>
           {message.map(({ title, name, description, date }, index) => {
             const isLast = index === props[1].length - 1;
-            const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
+            const classes = isLast ? "p-10" : "p-4 border-b border-blue-gray-50";
  
             return (
               <tr key={index}>
@@ -96,7 +96,7 @@ export default function DefaultTable({props}) {
                   <Typography
                     variant="small"
                     color="blue-gray"
-                    className="font-normal md:w-[500px] w-[150px] line-clamp-1 text-ellipsis"
+                    className="font-normal md:w-[500px] w-[100px] line-clamp-1 text-ellipsis"
                     onClick={()=>onClickCard({ title, name, description, date })}
                   >
                     {title}
@@ -129,10 +129,10 @@ export default function DefaultTable({props}) {
       {/* <section className='block'>
         <div className='flex justify-start gap-2 mt-3 ml-3'>
               <div className='rounded-md my-3 lg:text-start text-center text-[15px] p-2 bg-black text-white'>
-              {/* <div className='text-white' onClick={() => {push(props[2])}}>글쓰기</div> */}
-              {/* </div>
-            </div>   */}
-        {/* </section> */} 
+              <div className='text-white' onClick={() => {push(props[2])}}>글쓰기</div>
+              </div>
+            </div>  
+        </section>  */}
     </div>
     </section>
   );

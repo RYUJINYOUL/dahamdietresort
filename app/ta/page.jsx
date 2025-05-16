@@ -14,6 +14,7 @@ const page = (props) => {
   const vals = props.searchParams.val ?? "account"
 
   return (
+   <div className='relative top-8'>
     <section className='flex justify-center items-center m-4'>
     <div className="md:w-[1100px] w-full lg:mt-10 pt-3.5">
     <Tabs 
@@ -21,8 +22,8 @@ const page = (props) => {
     // onValueChange={() => { vals }}  
     className="w-full">
     <TabsList className="grid w-full grid-cols-2">
-      <TabsTrigger value="account">이용후기</TabsTrigger>
-      <TabsTrigger value="password">이용후기 글쓰기</TabsTrigger>
+      <TabsTrigger value="account">공지사항</TabsTrigger>
+      <TabsTrigger value="password">공지사항 글쓰기</TabsTrigger>
     </TabsList>
 
 
@@ -37,6 +38,7 @@ const page = (props) => {
   </Tabs>
   </div>
     </section>
+    </div>
   )
 }
 

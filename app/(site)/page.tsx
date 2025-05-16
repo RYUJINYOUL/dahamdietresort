@@ -14,7 +14,7 @@ const Page = () => {
    useAuth
 
   return (
-    <div>
+     <div className='relative top-20'>
     <div className='w-[1100px] w-full md:flex flex-col items-center justify-center'>
       <PagePadding>
         <div className='mt-7' />

@@ -36,8 +36,8 @@ const review = () => {
         "NumOfLikes": [],
       })
 
-      push(`/ta?val=account`);
-      // location.reload();
+      // push(`/ta?val=account`);
+      location.reload();
   }
 
 
@@ -163,7 +163,7 @@ const review = () => {
        <div className='font-medium text-lg' style={{ textAlign: 'center' }}>
       <h3>글쓰기</h3>
      </div>   
-    <div className='w-full flex justify-center items-center '>
+    {/* <div className='w-full flex justify-center items-center '>
     <div className={styles.card}>
       <div className='mt-5' />
       <div className={styles.dragArea} onClick={selectFiles} onDragOver={onDragOver} onDragLeave={onDragLeave} onDrop={onDrop}>
@@ -194,7 +194,7 @@ const review = () => {
        
     </div>
     
-    </div>
+    </div> */}
         <div className='mt-5'/>
         <form className='mx-auto max-w-sm' onSubmit={handleSubmit(onClickUpLoadButton)}>
              <input

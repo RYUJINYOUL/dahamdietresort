@@ -24,7 +24,7 @@ function Navigator() {
     },
      {
       label: "공지사항",
-      src: "/qu",
+      src: "/ta",
     },
     {
       label: "오시는길",
