@@ -34,6 +34,7 @@ const page = (props) => {
 
     <TabsContent value="password">
       <Review />
+      <div className="text-center">**관리자만 가능합니다.</div>
     </TabsContent>
   </Tabs>
   </div>

@@ -20,13 +20,13 @@ export default function Map() {
            const { Marker } = await loader.importLibrary('marker') as google.maps.MarkerLibrary
 
            const position = {
-            lat: 37.341279, 
-            lng: 126.806572
+            lat: 37.448646, 
+            lng: 126.378169
            }
 
            const mapOptions: google.maps.MapOptions = {
                center: position,
-               zoom: 17,
+               zoom: 13,
                mapTypeId: 'hybrid',
                streetViewControl:false,
                fullscreenControl:false,
