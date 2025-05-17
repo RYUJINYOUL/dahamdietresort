@@ -38,19 +38,7 @@ const Header2 = ({children}) => {
    const [isScrolled, setIsScrolled] = useState(false);
    const { homeCategory, setHomeCategory, setHeaderImageSrc } = useUIState();
    const headRef = useRef();
-   let slides = [
-    "/Image/main.jpg"
-     ,
-    "/Image/main1.jpg"
-     ,
-    "/Image/main2.jpg"
-    ,
-    "/Image/main3.jpg"
-     ,
-     "/Image/main4.jpg"
-     ,
-     "/Image/main5.jpg"
-   ]
+ 
 
    useEffect(() => {
       const handleScroll = () => {

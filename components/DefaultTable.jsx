@@ -12,7 +12,7 @@ export default function DefaultTable({props}) {
   const db2 = getFirestore(app);
   const [message, setMessages] = useState([]);
   const { push } = useRouter();
-  const timeFromNow = timestamp => moment(timestamp).format('YYYY-DD-MM');
+  const timeFromNow = timestamp => moment(timestamp).format('YYYY-MM-DD');
 
 
   useEffect(() => {

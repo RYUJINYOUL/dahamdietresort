@@ -40,7 +40,7 @@ export default function Menu(props) {
     if (homeCategory === item.label) {
       setHeaderImageSrc("");
       setHomeCategory(item.label);
-    } else {
+    }  {
       setHeaderImageSrc(item.src);
       setHomeCategory(item.label);
       push(item.src, {scroll: false})
@@ -52,26 +52,26 @@ export default function Menu(props) {
     if(pathname === "/") {
       setHomeCategory("다함단식하우스");
       setHomeCategory2("다함단식하우스");
-    } else if (pathname === "/si") {
+    } if (pathname === "/si") {
       setHomeCategory("다함시설");
-    } else if (pathname === "/ta") {
+    }  if (pathname === "/ta") {
       setHomeCategory("공지사항");
-    } else if (pathname === "/map") {
+    }  if (pathname === "/map") {
       setHomeCategory("오시는길");
     } 
-    else if (pathname === "/dastory") {
+     if (pathname === "/dastory") {
       setHomeCategory("다함단식하우스");
       setHomeCategory2("다함이야기");
-    } else if (pathname === "/dastory/reser") {
+    }  if (pathname === "/dastory/reser") {
       setHomeCategory("다함단식하우스");
       setHomeCategory2("예약및입소절차비용안내");
-    } else if (pathname === "/dastory/pro") {
+    }  if (pathname === "/dastory/pro") {
       setHomeCategory("다함단식하우스");
       setHomeCategory2("프로그램");
-    } else if (pathname === "/dastory/jun") {
+    }  if (pathname === "/dastory/jun") {
       setHomeCategory("다함단식하우스");
       setHomeCategory2("준비물안내");
-    } else if (pathname === "/dastory/gyu") {
+    }  if (pathname === "/dastory/gyu") {
       setHomeCategory("다함단식하우스");
       setHomeCategory2("규칙안내");
     } 

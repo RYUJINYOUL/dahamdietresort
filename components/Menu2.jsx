@@ -91,7 +91,7 @@ const slideRight = () => {
           key={item.label}
           id={i}
           className={cn(
-            "h-[38px] md:text-[15px] text-[14px] text-white min-w-fit px-2 pt-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-100",
+            "h-[38px] md:text-[15px] text-[14px] text-white min-w-fit px-2 pt-2 flex justify-center items-center  hover:bg-gray-100",
             total.total&&"md:text-black text-[#aaa]",
             item.label === homeCategory2 &&
               "font-semibold text-black"

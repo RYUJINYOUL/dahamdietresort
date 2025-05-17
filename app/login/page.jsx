@@ -2,11 +2,11 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import useAuth from '@/hooks/useAuth'
 import app from '../../firebase';
+import Footer from '@/components/Footer'
 
 
 const LoginPage = () => {
@@ -38,12 +38,12 @@ const LoginPage = () => {
     const handleGoogleSign = async () => {
         const provider = new GoogleAuthProvider();
         await signInWithPopup(auth, provider).then((data) => {
-          console.log(data);
         }).catch((err) => console.log(err));
       }
 
     return (
-        <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
+        <div className='relative flex flex-col items-center justify-center w-full md:top-25 top-10'>
+        <div className="min-h-[500px] w-[1100px] bg-gray-100 text-gray-900 flex justify-center">
         <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
             <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
               
@@ -156,6 +156,8 @@ const LoginPage = () => {
                 </div>
             </div>
         </div>
+    </div>
+    <Footer />
     </div>
     )
 }
