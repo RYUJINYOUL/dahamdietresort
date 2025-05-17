@@ -57,7 +57,7 @@ export default function Menu2(props) {
   useEffect(() => {
     slideRight()
 
-}, []);
+}, [pathname]);
 
 
 
@@ -65,19 +65,19 @@ export default function Menu2(props) {
 
 const slideRight = () => {
   var slider = document.getElementById('nav2');
-  if (headerImageSrc2 === "/dastory") {
+  if (pathname === "/dastory") {
     slider.scroll(50, 100)
   }
-  if (headerImageSrc2 === "/dastory/reser") {
+  if (pathname === "/dastory/reser") {
     slider.scroll(100, 200)
   }
-  if (headerImageSrc2 === "/dastory/pro") {
+  if (pathname === "/dastory/pro") {
     slider.scroll(200, 400)
   }
-  if (headerImageSrc2 === "/dastory/jun") {
+  if (pathname === "/dastory/jun") {
     slider.scroll(300, 500)
   }
-  if (headerImageSrc2 === "/dastory/gyu") {
+  if (pathname === "/dastory/gyu") {
     slider.scroll(500, 600)
   }
 };
@@ -91,7 +91,7 @@ const slideRight = () => {
           key={item.label}
           id={i}
           className={cn(
-            "h-[38px] md:text-[14px] text-[13px] text-white min-w-fit px-2 pt-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-100",
+            "h-[38px] md:text-[15px] text-[14px] text-white min-w-fit px-2 pt-2 flex justify-center items-center border border-transparent rounded-lg hover:bg-gray-100",
             total.total&&"md:text-black text-[#aaa]",
             item.label === homeCategory2 &&
               "font-semibold text-black"
