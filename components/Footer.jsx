@@ -30,7 +30,9 @@ return (
                  </li>
                  <li className='text-[#959595] text-[13px]'>
                    <span className="item_title">전화번호 : </span>
-                   <span className="item_description">010-3896-0696</span>
+                   <span className="item_description"><a href="tel:010-3896-0696" className="_callTel">
+                      010-3896-0696
+                    </a></span>
                  </li>
                 <li className='text-[#959595] text-[13px]'>
                    <span className="item_title">주소 : </span>
