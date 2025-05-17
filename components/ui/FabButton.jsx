@@ -1,9 +1,11 @@
 "use client"
 import { useState } from "react";
 import { CiPhone } from "react-icons/ci";
+import { FaRegEnvelope } from "react-icons/fa";
 import { LuMapPin } from "react-icons/lu";
 import { useRouter } from 'next/navigation'
 import useUIState from "@/hooks/useUIState";
+import { IoPersonOutline } from "react-icons/io5";
 
 const FabButton = () => {
   const [openSubMenu, setOpenSubMenu] = useState(false);
@@ -30,14 +32,26 @@ const FabButton = () => {
       {/* <div className="gap-3"> */}
         {openSubMenu && (
           <ul>
-           <a href="tel:010-9936-1642">
-           <button className="bg-[#292e3b] flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110">
-            <CiPhone className="w-6 h-6" />
+           <a href="tel:010-3896-0696">
+           <button className="bg-[#cdad8f] flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110">
+            <CiPhone className="w-7 h-7" />
+           </button>
+          </a>
+
+          <a href="sms:010-3896-0696">
+           <button className="bg-[#cdad8f] mt-3 flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110">
+            <FaRegEnvelope className="w-6 h-6" />
+           </button>
+          </a>
+
+           <a href="sms:010-3896-0696">
+           <button className="bg-[#cdad8f] mt-3 flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110">
+            <IoPersonOutline className="w-6 h-6" />
            </button>
           </a>
   
 
-          <button className="bg-[#292e3b] mt-3 flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110" 
+          <button className="bg-[#cdad8f] mt-3 flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110" 
           onClick={() => {onClickCategory("오시는 길" ,"/map")}}>
             <LuMapPin className="w-6 h-6" />
            </button>
@@ -69,7 +83,7 @@ const FabButton = () => {
           </ul>
         )}
       {/* </div> */}
-      <button className="bg-[#292e3b] w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110" onClick={shownSubMenuHandler}>
+      <button className="bg-[#cdad8f] w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110" onClick={shownSubMenuHandler}>
         {openSubMenu ? <h1>{"x"}</h1> : <h1>{"+"}</h1>}
       </button>
 
