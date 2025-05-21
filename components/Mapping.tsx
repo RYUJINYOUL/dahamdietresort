@@ -44,11 +44,11 @@ const Mapping = () => {
         <div className='flex flex-row gap-2'>
           <div className='flex flex-row gap-1.5 lg:text-start text-center text-[15px] p-2 bg-[#d6b79a] text-white'>
           <HiArrowTurnRightUp className='text-[20px]'/>
-          <div className='text-white' onClick={() => {window.open("https://map.naver.com/p/entry/place/13492349?c=13.00,0,0,0,dh")}}>길찾기</div>
+          <div className='text-white' onClick={() => {window.open("https://map.naver.com/p/directions/-/14068354.2887583,4501803.3341385,%EC%98%81%EC%A2%85%EB%8B%A4%ED%95%A8%EB%8B%A8%EC%8B%9D%ED%95%98%EC%9A%B0%EC%8A%A4,13492349,PLACE_POI/-/transit?c=14.00,0,0,0,dh")}}>길찾기</div>
           </div>
           <div className='flex flex-row gap-1.5 lg:text-start text-center text-[15px] p-2 bg-[#d6b79a] text-white'>
           <CiMap className='text-[20px]'/>
-          <div className='text-white' onClick={() => {window.open("https://map.naver.com/p/search/%EC%98%81%EC%A2%85%EB%8B%A4%ED%95%A8%EB%8B%A8%EC%8B%9D%ED%95%98%EC%9A%B0%EC%8A%A4/place/13492349?c=15.00,0,0,0,dh&isCorrectAnswer=true")}}>지도에서 보기</div>
+          <div className='text-white' onClick={() => {window.open("https://map.naver.com/p/entry/place/13492349?c=13.00,0,0,0,dh")}}>지도에서 보기</div>
           </div>
         </div>  
       </div>
@@ -186,11 +186,11 @@ const Mapping = () => {
     <div className='flex flex-row gap-2'>
           <div className='flex rounded-md flex-row gap-1.5 lg:text-start text-center text-[15px] p-2 bg-[#d6b79a] text-white'>
           <HiArrowTurnRightUp className='text-[20px]'/>
-          <div className='text-white' onClick={() => {window.open("https://map.naver.com/p/entry/place/13492349?c=13.00,0,0,0,dh")}}>길찾기</div>
+          <div className='text-white' onClick={() => {window.open("https://map.naver.com/p/directions/-/14068354.2887583,4501803.3341385,%EC%98%81%EC%A2%85%EB%8B%A4%ED%95%A8%EB%8B%A8%EC%8B%9D%ED%95%98%EC%9A%B0%EC%8A%A4,13492349,PLACE_POI/-/transit?c=14.00,0,0,0,dh")}}>길찾기</div>
           </div>
           <div className='flex flex-row gap-1.5 rounded-md lg:text-start text-center text-[15px] p-2 bg-[#d6b79a] text-white'>
           <CiMap className='text-[20px]'/>
-          <div className='text-white' onClick={() => {window.open("https://map.naver.com/p?title=%ED%9D%99%EA%B4%91%EA%B3%A0%EA%B8%B0%ED%9A%8D&lng=126.8065872&lat=37.3413429&zoom=13&type=0&c=13.00,0,0,0,dh")}}>지도에서 보기</div>
+          <div className='text-white' onClick={() => {window.open("https://map.naver.com/p/entry/place/13492349?c=13.00,0,0,0,dh")}}>지도에서 보기</div>
           </div>
         </div>  
     </section>

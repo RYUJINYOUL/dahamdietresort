@@ -24,7 +24,7 @@ const phone = () => {
                 </a>
               
             
-                <a href="sms:010-3896-0696" className='flex md:flex-row flex-col items-center justify-center gap-2.5'>
+                <a href="http://pf.kakao.com/_XWtin/chat" className='flex md:flex-row flex-col items-center justify-center gap-2.5'>
                 <div className='flex md:flex-row flex-col items-center justify-center gap-2.5'>
                   <IoPersonOutline className='text-[20px] text-white md:text-[30px]'/>
                   <div className='text-white text-center text-[15px] md:text-[20px]'>카톡상담</div>

@@ -65,6 +65,7 @@ const Header2 = ({children}) => {
         
    <section className={cn('absolute w-full top-0 left-0 flex h-[55px] sm:h-[40px] z-10 items-start md:justify-center sm:justify-between', 
     isScrolled&&"bg-white", homeCategory === "다함단식하우스"&&"lg:h-[101px] h-[103px]")}>
+  
    <div className='flex flex-col'>
    
       <div className='md:absolute sm:absolute lg:relative lg:w-[1100px] w-full items-center md:justify-between sm:justify-between'>
