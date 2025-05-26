@@ -44,7 +44,7 @@ const FabButton = () => {
            </button>
           </a>
 
-           <a href="sms:010-3896-0696">
+           <a href="http://pf.kakao.com/_XWtin/chat">
            <button className="bg-[#cdad8f] mt-3 flex items-center justify-center w-13 h-13 xs:w-11 xs:h-11 text-white rounded-full shadow-lg transition-transform hover:scale-110">
             <IoPersonOutline className="w-6 h-6" />
            </button>

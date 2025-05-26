@@ -29,6 +29,7 @@ const review = () => {
         "name": currentUser.name ?? "익명",
         "description": data.description,
         "url": image,
+        "password":data.password ?? "",
         "title": data.title,
         "phoneNumber": currentUser.phoneNumber ?? "0",
         "userKey": currentUser.uid ?? "",
@@ -158,7 +159,7 @@ const review = () => {
 
 
   return (
-    <div className="flex items-center justify-start p-12">
+    <div className="flex items-center justify-start p-2 pt-10">
     <div className="mx-auto w-full max-w-[550px] bg-white">
        <div className='font-medium text-lg' style={{ textAlign: 'center' }}>
       <h3>글쓰기</h3>
@@ -205,6 +206,14 @@ const review = () => {
                   {...register("title")}
                 />
              <div className='mt-5'/>
+             <input
+                  className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                  type="password" 
+                  name="password"
+                  placeholder="비밀번호설정"
+                  {...register("password")}
+                />   
+             <div className='mt-5'/>
             
               <textarea
                     className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
@@ -219,7 +228,7 @@ const review = () => {
             <div>
                 <button
                     type="submit"
-                    className="w-full px-8 py-4 rounded-lg font-medium bg-amber-300 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white">
+                    className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white">
                     등록
                 </button>
             </div>
