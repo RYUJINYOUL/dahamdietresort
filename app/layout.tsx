@@ -24,6 +24,12 @@ export default function RootLayout({
   return (
     <html lang="ko"
      suppressHydrationWarning>
+        <head>
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="VHyqXjt7UmgqBvFxj2-Em5Y6yGjDzchXa-YgfgML0BU" />
+        {/* Naver Site Verification */}
+        <meta name="naver-site-verification" content="718950b5a1fe655d1f8ca7cf145e39a3573de2c0" />
+      </head>
       <body className={inter.className}>
       <ClientLayout>
         <ThemeProvider
